@@ -202,7 +202,7 @@ export default class TestRunner extends EventEmitter {
     const watchOptions = watchCompiler.getWatchOptions();
     const pollingInterval = typeof watchOptions.poll === 'number' ? watchOptions.poll : undefined;
     // create own file watcher for entry files to detect created or deleted files
-    const watcher = chokidar.watch('.', {
+    const watcher = chokidar.watch(['src', 'test'], {
       cwd: this.options.cwd,
       // see https://github.com/webpack/watchpack/blob/e5305b53ac3cf2a70d49a772912b115fa77665c2/lib/DirectoryWatcher.js
       ignoreInitial: true,
