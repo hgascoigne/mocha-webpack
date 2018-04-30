@@ -5,14 +5,6 @@
 node_modules
 npm-debug.log
 
-# Project
-lib/*
-!lib/utils.js
-!lib/entry.js
-!lib/reporters
-lib/reporters/*
-!lib/reporters/base.js
-
 # Code Coverage
 .nyc_output
 coverage
